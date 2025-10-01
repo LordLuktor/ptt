@@ -1,0 +1,1 @@
+{"name": "ptt-web-dashboard", "version": "1.0.0", "main": "src/index.js", "scripts": {"start": "webpack serve --open", "build": "webpack"}, "dependencies": {"react": "^17.0.2", "react-dom": "^17.0.2"}, "devDependencies": {"webpack": "^5.64.4", "webpack-cli": "^4.9.1", "webpack-dev-server": "^4.6.0"}}
