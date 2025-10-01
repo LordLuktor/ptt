@@ -1,0 +1,1 @@
+{\n  "name": "ptt-mobile",\n  "version": "0.1.0",\n  "main": "App.js",\n  "scripts": {\n    "start": "react-native start"\n  },\n  "dependencies": {\n    "react": "18.2.0",\n    "react-native": "0.72.0",\n    "@react-navigation/native": "^6.0.13",\n    "@react-navigation/stack": "^6.3.3",\n    "socket.io-client": "^4.7.2"\n  }\n}
