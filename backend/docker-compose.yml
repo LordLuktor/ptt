@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: ptt_api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=pttuser
+      - DB_PASS=pttpass
+      - DB_NAME=pttdb
+      - JWT_SECRET=supersecretkey
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  db:
+    image: postgres:16
+    container_name: ptt_db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=pttdb
+      - POSTGRES_USER=pttuser
+      - POSTGRES_PASSWORD=pttpass
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  dbdata:
